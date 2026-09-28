@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICET 2025 Quiz</title>
+    <link rel="stylesheet" href="quiz-style.css">
+    <!-- Include MathJax for math rendering if needed, based on some questions having $...$ -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header">
+            <h1>ICET Quiz</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p id="question-count">Question 1 of N</p>
+        </div>
+        
+        <div class="card" id="quiz-card">
+            <h2 id="question-text">Question goes here</h2>
+            <div id="options-container" class="options">
+                <!-- Options will be dynamically injected here -->
+            </div>
+            <div id="feedback-container" class="feedback hidden">
+                <p id="feedback-text"></p>
+                <button id="next-btn" class="btn hidden">Next Question</button>
+            </div>
+        </div>
+
+        <div id="results-container" class="results hidden">
+            <h2>Quiz Completed!</h2>
+            <p>You scored <span id="score">0</span> out of <span id="total-questions">0</span>.</p>
+            <button id="restart-btn" class="btn">Restart Quiz</button>
+        </div>
+    </div>
+    
+    <script src="quiz-script.js"></script>
+</body>
+</html>
